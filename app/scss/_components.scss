@@ -1,0 +1,48 @@
+// everything that is reusable – buttons, navbars, cards, and so on
+@import "base";
+
+// headings
+h2 {
+    font-size: 23px;
+    margin-top: 38px;
+}
+h3 {
+    font-weight: normal;
+}
+
+
+// buttons
+.btn {
+    @include btn-style;
+  &--hover {
+    //   background: $btn-gradient-darken;
+    background: lighten($color: $color-primary, $amount: 10%);
+  }
+}
+
+.btn-explore {
+    width: 225px;
+}
+
+// .btn-order {}
+
+// icons
+i {
+    font-size: 18px;
+    // width: 7px;
+}
+
+// .heart {
+
+// }
+
+
+// shape 
+// gradient
+// shadow
+// active state (in hover?)
+// color of font 
+
+// }
+
+// and in layout, padding?

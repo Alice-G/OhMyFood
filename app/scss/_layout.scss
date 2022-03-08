@@ -1,0 +1,442 @@
+// all the Sass code handling the layout, which is the container & grid systems, header, footer,etc
+
+@import 'components';
+
+// headers
+.header__main {
+    @include header-style;
+    @include shadow;
+    justify-content: center;
+}
+
+.header__restaurant {
+    width: 100%;
+    @include header-style;
+    @include shadow;
+    a {
+        padding-left: 20px;
+        i {
+            font-size: 22px;
+        }
+    }
+    h1 {
+        width: 100%;
+        text-align: center;
+        margin-left: -20px; // compensate for padding of backlink
+    }
+}
+
+// search bar
+.searcharea {
+    width: 100%;
+    height: 50px;
+    background-color: $color-background-searchbar;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    input[type=text] {
+        // text-align: center;
+        // width: 90px;
+        border: none;
+        background-color: $color-background-searchbar;
+        font-size: 16px;
+        // &:active {
+        //     background-color: seagreen;
+        //     border: none;
+        // }
+        // &:focus {
+        //     background-color: violet;
+        //     border: none;
+        // }
+        // &:active, &:focus {
+        //     background-color: aquamarine;
+        // }
+    }
+}
+
+// blurb
+.blurb {
+    width: 100%;
+    text-align: center;
+    height: 250px;
+    // padding:0 6% 20px 6%;
+    padding: 0 6%;
+    // padding: 15%;
+    & > h2 {
+        padding: 0 10%;
+    }
+    & > p {
+    font-size: 18px;
+    }
+    & .btn-explore {
+        // does not work 
+        margin-bottom: 20px;
+    }
+}
+
+// How To
+.howto {
+    background: $color-background-elements;
+    padding: 10px;
+    padding-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+    h2 {
+        padding-left: 20px;
+        align-self: flex-start;
+        margin-bottom: 0; // to compensate for row-gap
+    }
+    div {
+        width: 85%;
+        height: 75px;
+        border-radius: 20px;
+        background-color: $color-background-body;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+
+        @include shadow;
+
+        &:hover .fa-solid {
+            color: $color-primary;
+        }
+        
+        & > * {
+            position: relative;
+            left: -12px;
+        }
+
+    }
+
+    .lilbtn {
+        background-color: $color-primary;
+        width: 25px;
+        height: 25px;
+
+        border-radius: 100%;
+
+        font-size: 14px;
+        color: $color-text-invert;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .fa-solid {
+        color: $color-icons-inactive;
+        margin: 20px;
+
+    }
+
+}
+
+
+
+// Home - Restaurant blocks
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+    h2 {
+        padding: 14px 0 0 20px;
+        align-self: flex-start;
+        margin-bottom: 0; // to compensate for row-gap
+    }
+
+    .restaucard {
+        width:89%;
+        background-color: $color-background-elements;
+        border-radius: 16px;
+
+        .restaurant__pic-container {
+            position: relative;
+            text-align: center;
+
+            height: 175px;
+
+            .tag-new {
+                background-color: $color-btn-new; 
+                height: 28px;
+                width: 80px;
+                // font-weight: bold; ??????
+                font-size: 14px;
+                color: $color-btn-text; 
+                border-radius: 3px;
+                border: 1px outset;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                position: absolute;
+                top: 12px;
+                right: 12px;
+
+                // @include shadow;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 16px 16px 0 0;
+                object-fit: cover;
+            }    
+        }
+
+        .restaurant-cardbody  {
+            // rule 
+            padding: 0 15px;
+
+            h1 {
+                font-size: 18px;
+                margin-bottom: -15px;
+            }
+
+            p {
+                font-size: 17px;
+            }
+        }  
+    }
+}
+
+// Menu Page - Menu
+@keyframes tadaaa {
+    from {opacity:0}
+    to {opacity:1}
+  }
+
+.menu-page {
+    .menu-page__pic-container {
+        // width: 100%;
+        height: 260px;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .menu {
+        background-color: violet;
+        border-radius: 40px;
+        padding: 15px;
+        // negative margin 
+
+        .menu__header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            h1 {
+                font-family: $font-title;
+                font-weight: normal;
+            object-fit: cover;
+            font-size: 28px;
+            }
+            .heart {
+                i {
+                    font-size: 25px;
+                    border: 1px solid #000;
+                    color: $color-tertiary;
+                }
+
+            }
+        }
+
+        .menu-cat {
+            
+            .menu-cat__header {
+                h2 {
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: normal;
+                margin: 2px 0;
+                }
+                .menu-cat__line {
+                    width: 40px;
+                    height: 3px;
+                    margin: 0;
+                    background-color: $color-menu-deco-bar;
+                }
+            }
+
+
+        .menu__menu-items-container {
+     //      & ~ {    // select children properly
+                // opacity: 0;
+     //       }
+            :nth-child(1) {
+                animation: tadaaa 2s ease-in-out forwards;
+                animation-delay:100ms;
+            }
+            :nth-child(2) {
+                animation: tadaaa 2s ease-in-out forwards;
+                animation-delay:500ms;
+            }
+            :nth-child(3) {
+                animation: tadaaa 2s ease-in-out forwards;
+                animation-delay:700ms;
+            }
+    
+
+
+                .menu__card {
+                    border-radius: 20px;
+                    padding: 15px 12px;
+                    margin: 15px 0;
+                    background-color: $color-background-elements;
+                    @include shadow;
+    
+    
+                    line-height: 1em;
+                    height: 70px;
+                    width: 100%;
+    
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    opacity: 0; // to make appear one by one
+
+
+
+                    position: relative;
+                    overflow: hidden;
+                    
+                    transition: all 0.2s ease-in 0s;
+                    
+                    &:before {
+                        content: "\f058"; 
+                        font-family: FontAwesome;
+                        font-size: 20px;
+                        color:$color-background-elements;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        top: 0;
+                        right: -50px;
+                        width: 50px;
+                        height: 100%;
+                        background-color: rgba($color-menu-item-overlay-color,0.9);
+                    //   border-radius: 0px $border-radius $border-radius 0px;
+                        transition: all 0.2s linear 0s;
+                        text-align: center;
+                    }
+                    
+                    &:hover {
+                        text-indent: -30px;
+                        
+                        &:before {
+                        right: 0;
+                        text-indent: 0px;
+                        }
+                    }
+
+                    .menu__card__txt {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+
+                        
+                        
+                        border: 2px dotted sandybrown;
+    
+                        h3 {
+                            font-size: 17px;
+                            margin: 6px 0;
+                            // font-weight:600;  does not work
+                        }
+                        p {
+                            font-size: 15px;
+                            margin: 0 0 3px 0;
+
+                            width: 98%;
+                            border: 2px dotted darkred;
+
+                            overflow-y: clip;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            // wrap: nowrap;
+                            // text-overflow: ellipsis;
+                            // overflow-wrap: ellipsis;
+                            // text-overflow: ellipsis;
+                        }
+                    }
+                    .price {
+                        font-weight: bold;
+                        color: $color-background-footer;
+                        width: 15%;
+                        height: 100%;
+
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+
+                        border: 2px dotted sandybrown;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+        
+}
+
+    
+
+
+
+
+
+
+
+
+// footer
+footer {
+    padding: 20px;
+    background-color: $color-background-footer;
+    color: $color-background-body;
+
+
+    h3 {
+        font-family: $font-title;
+        font-size: 18px;
+    }
+    p {
+        line-height: 0.9em;
+        i {
+            font-size: 14px;
+            margin-right: 7px;
+        }
+        a {
+            color: $color-background-body;
+        }
+    }
+
+
+
+
+
+}
+
+
+
+
+
+// background color 
+// font color  $color-text-invert:
+// font of h3 
+// icons

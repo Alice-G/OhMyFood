@@ -1,0 +1,79 @@
+// contains all the resets, variables, mixins, and utility classes
+$color-primary: #9356DC;
+$color-secondary: #FF79DA; 
+$color-tertiary: #99E2D0;
+$color-background-body: #f0f0f0;
+$color-background-elements: #fdfdfd;
+$color-background-footer: #353535;
+$color-background-searchbar: darken($color-background-body, 7%);
+$color-shadow: #bebebe;
+$color-btn-new: #99E2D0;
+$color-menu-deco-bar: $color-btn-new;
+$color-menu-item-overlay-color: $color-btn-new;
+$color-btn-text: darken($color-btn-new, 38%);
+$color-text-body: #000;
+$color-text-invert: $color-background-body;
+$color-icons-inactive: #6d6d6d;
+$color-icons-active: $color-primary;
+$btn-gradient: linear-gradient(174deg, $color-secondary 0%, $color-primary 85%, $color-primary 100%);
+$btn-gradient-lighter: linear-gradient(174deg, lighten($color-secondary, 5%) 0%, lighten($color-primary, 5%) 85%, lighten($color-primary, 5%) 100%);
+
+
+// $color-heart-icon-gradient:  linear-gradient(0deg, rgba(255,18,222,1) 0%, rgba(156,45,253,1) 100%);
+
+$font-title: 'Shrikhand', cursive;
+
+@mixin shadow {
+    box-shadow: 2px 5px 8px 0px $color-shadow;
+}
+@mixin shadow-darker {
+    box-shadow: 2px 5px 8px 0px darken($color-shadow, 20%);
+}
+
+// do a if mixin of btn style with hover or not and color and shadow?
+
+@mixin header-style {
+    width: 100%;
+    height: 63px;
+    background-color: $color-background-elements;
+    font-family: $font-title;
+    font-size: 15px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // margin: 0;
+    // padding:0;
+
+}
+
+@mixin btn-style { 
+    height: 50px;
+border-radius:30px;
+border: none;
+color: #fff;
+font-size: 1.02em;
+background: $btn-gradient;
+@include shadow;    
+}
+
+
+
+
+
+
+// As far as I know you can't import fonts using @import in SCSS. You can include fonts using @font-face. For example:
+
+// @font-face {
+//     font-family: 'Open Sans';
+//     src: url(path/to/file) format(Example: 'truetype' or 'opentype' depending on the file extension of your font);
+// }
+
+
+// // USAGE
+// body {
+//     font-family: 'Open Sans', sans-serif;
+// }
+
+
+

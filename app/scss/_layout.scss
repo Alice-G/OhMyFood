@@ -2,6 +2,99 @@
 
 @import 'components';
 
+//spinner
+@keyframes disappear{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      display: none;
+      opacity: 0;
+    }
+  }
+ @keyframes spin {
+    to { transform: rotate(1turn); }
+}
+.spinner-container {
+height:100vh;
+width:100%;
+display:flex;
+justify-content: center;
+align-items: center;
+background:linear-gradient(312deg, lighten($color-tertiary , 1) 0%, lighten($color-secondary, 5) 100%);
+z-index:100;
+position: absolute;
+
+animation-name: disappear;
+animation-duration: 1800ms;
+animation-fill-mode: forwards;
+animation-delay:2000ms;
+
+    .loading {
+        display: inline-flex;
+        align-items: center;        
+    }
+}
+  
+.loading__spinner {    
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-indent: 999em;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s infinite steps(12);
+    
+    &:before,
+    &:after,
+    > span:before,
+    > span:after,
+    > span > span:before,
+    > span > span:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 27px; /* (container width - part width)/2  */
+        width: 6px;
+        height: 15px;
+        border-radius: 3px;
+        background: rgba($color-primary, 0.16);
+        box-shadow: 0 (60px - 15px) rgba(#9356DC, 0.16); /* container height - part height */
+        transform-origin: 50% 30px; /* container height / 2 */
+    }
+}
+  .loading__spinner:before {
+      background: $color-primary;
+  }
+  .loading__spinner:after {
+      transform: rotate(-30deg);
+      background-color: transparentize($color-primary, 0.24);
+  }
+  .loading__spinner > span:before {
+      transform: rotate(-60deg);
+      background: rgba(#9356DC, 0.64);
+      background-color: transparentize($color-primary, 0.36);
+  }
+  .loading__spinner > span > span:before {
+      transform: rotate(-90deg);
+      background: rgba(#9356DC, 0.52);
+      background-color: transparentize($color-primary, 0.48);
+  }
+  .loading__spinner > span:after {
+      transform: rotate(-120deg);
+      background: rgba(#9356DC, 0.40);
+      background-color: transparentize($color-primary, 0.60);
+  }
+  .loading__spinner > span > span:after {
+      transform: rotate(-150deg);
+      background: rgba(#9356DC, 0.28);
+      background-color: transparentize($color-primary, 0.72);
+  }
+  
+
+
+
 // headers
 .header__main {
     @include header-style;

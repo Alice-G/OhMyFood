@@ -73,22 +73,18 @@ animation-delay:2000ms;
   }
   .loading__spinner > span:before {
       transform: rotate(-60deg);
-      background: rgba(#9356DC, 0.64);
       background-color: transparentize($color-primary, 0.36);
   }
   .loading__spinner > span > span:before {
       transform: rotate(-90deg);
-      background: rgba(#9356DC, 0.52);
       background-color: transparentize($color-primary, 0.48);
   }
   .loading__spinner > span:after {
       transform: rotate(-120deg);
-      background: rgba(#9356DC, 0.40);
       background-color: transparentize($color-primary, 0.60);
   }
   .loading__spinner > span > span:after {
       transform: rotate(-150deg);
-      background: rgba(#9356DC, 0.28);
       background-color: transparentize($color-primary, 0.72);
   }
   
@@ -308,20 +304,33 @@ animation-delay:2000ms;
   }
 
 .menu-page {
+    position: relative;
+    width: 100%;
+
     .menu-page__pic-container {
-        // width: 100%;
+        width: 100%;
         height: 260px;
+
+        position: absolute;
+        top: 0;
         img {
             width: 100%;
+            height: 100%;
             object-fit: cover;
+
+            z-index: -1;
         }
     }
 
     .menu {
-        background-color: violet;
+        background-color: $color-background-body;
         border-radius: 40px;
         padding: 15px;
-        // negative margin 
+        width: 100%;
+
+        position: absolute;
+        top: 225px;
+        z-index: 100;
 
         .menu__header {
             display: flex;
@@ -502,7 +511,7 @@ footer {
     padding: 20px;
     background-color: $color-background-footer;
     color: $color-background-body;
-
+    margin-top: 20px;
 
     h3 {
         font-family: $font-title;

@@ -201,28 +201,24 @@ i {
 .loading__spinner > span:before {
   -webkit-transform: rotate(-60deg);
           transform: rotate(-60deg);
-  background: rgba(147, 86, 220, 0.64);
   background-color: rgba(147, 86, 220, 0.64);
 }
 
 .loading__spinner > span > span:before {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  background: rgba(147, 86, 220, 0.52);
   background-color: rgba(147, 86, 220, 0.52);
 }
 
 .loading__spinner > span:after {
   -webkit-transform: rotate(-120deg);
           transform: rotate(-120deg);
-  background: rgba(147, 86, 220, 0.4);
   background-color: rgba(147, 86, 220, 0.4);
 }
 
 .loading__spinner > span > span:after {
   -webkit-transform: rotate(-150deg);
           transform: rotate(-150deg);
-  background: rgba(147, 86, 220, 0.28);
   background-color: rgba(147, 86, 220, 0.28);
 }
 
@@ -503,20 +499,34 @@ i {
   }
 }
 
+.menu-page {
+  position: relative;
+  width: 100%;
+}
+
 .menu-page .menu-page__pic-container {
+  width: 100%;
   height: 260px;
+  position: absolute;
+  top: 0;
 }
 
 .menu-page .menu-page__pic-container img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: -1;
 }
 
 .menu-page .menu {
-  background-color: violet;
+  background-color: #f0f0f0;
   border-radius: 40px;
   padding: 15px;
+  width: 100%;
+  position: absolute;
+  top: 225px;
+  z-index: 100;
 }
 
 .menu-page .menu .menu__header {
@@ -696,6 +706,7 @@ footer {
   padding: 20px;
   background-color: #353535;
   color: #f0f0f0;
+  margin-top: 20px;
 }
 
 footer h3 {

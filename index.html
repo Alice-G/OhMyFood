@@ -27,7 +27,6 @@
       </div>
 
 
-
     <!-- website -->
     <header class="header__main">
         <h1>ohmyfood</h1>
@@ -36,7 +35,7 @@
     <div class="searcharea">
         <form class="searchbar" method="post" action="traitement.php">
         <i class="fas fa-map-marker-alt"></i>
-        <input type="text" name="search" placeholder="Paris, Belleville" autocomplete="off" />
+        <input type="text" id="location" name="search" placeholder="Paris, Belleville" autocomplete="off" />
         <!-- <button type="submit">This supposed to be a searchbar?</button> -->
         </form>
     </div>   
@@ -52,19 +51,19 @@
 
         <section class="howto">
             <h2>Fonctionnement</h2>
-            <div>
+            <div class="howto__card">
                 <div class="lilbtn">1</div>
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 <span>Choisissez un restaurant</span>
             </div>
 
-            <div>
+            <div class="howto__card">
                 <div class="lilbtn">2</div>
                 <i class="fa-solid fa-list-ul"></i>
                 <span>Composez votre menu</span>
             </div>
 
-            <div>
+            <div class="howto__card">
                 <div class="lilbtn">3</div>
                 <i class="fa-solid fa-store"></i>
                 <span>Dégustez au restaurant</span>

@@ -18,8 +18,8 @@ h3 {
           box-shadow: 2px 5px 8px 0px #bebebe;
 }
 
-.btn--hover {
-  background: #ae80e5;
+.btn:hover {
+  background: linear-gradient(174deg, #ff93e1 0%, #a16be0 85%, #a16be0 100%);
 }
 
 .btn-explore {
@@ -74,8 +74,8 @@ h3 {
           box-shadow: 2px 5px 8px 0px #bebebe;
 }
 
-.btn--hover {
-  background: #ae80e5;
+.btn:hover {
+  background: linear-gradient(174deg, #ff93e1 0%, #a16be0 85%, #a16be0 100%);
 }
 
 .btn-explore {
@@ -244,6 +244,7 @@ i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .header__restaurant {
@@ -266,10 +267,27 @@ i {
           align-items: center;
   -webkit-box-shadow: 2px 5px 8px 0px #bebebe;
           box-shadow: 2px 5px 8px 0px #bebebe;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header__restaurant a {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   padding-left: 20px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__restaurant a i {
@@ -314,11 +332,11 @@ i {
   padding: 0 6%;
 }
 
-.blurb > h2 {
+.blurb h2 {
   padding: 0 10%;
 }
 
-.blurb > p {
+.blurb p {
   font-size: 18px;
 }
 
@@ -350,7 +368,7 @@ i {
   margin-bottom: 0;
 }
 
-.howto div {
+.howto .howto__card {
   width: 85%;
   height: 75px;
   border-radius: 20px;
@@ -372,11 +390,11 @@ i {
           box-shadow: 2px 5px 8px 0px #bebebe;
 }
 
-.howto div:hover .fa-solid {
+.howto .howto__card:hover .fa-solid {
   color: #9356DC;
 }
 
-.howto div > * {
+.howto .howto__card > * {
   position: relative;
   left: -12px;
 }

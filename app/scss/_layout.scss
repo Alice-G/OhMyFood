@@ -96,14 +96,26 @@ animation-delay:2000ms;
     @include header-style;
     @include shadow;
     justify-content: center;
+    position: relative; //so that boxshadow appears
 }
 
 .header__restaurant {
     width: 100%;
     @include header-style;
     @include shadow;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     a {
+        align-self: flex-start;
         padding-left: 20px;
+        height:100%;
+        // width: 50px; does not work
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
         i {
             font-size: 22px;
         }
@@ -152,10 +164,10 @@ animation-delay:2000ms;
     // padding:0 6% 20px 6%;
     padding: 0 6%;
     // padding: 15%;
-    & > h2 {
+    h2 {
         padding: 0 10%;
     }
-    & > p {
+    p {
     font-size: 18px;
     }
     & .btn-explore {
@@ -178,7 +190,7 @@ animation-delay:2000ms;
         align-self: flex-start;
         margin-bottom: 0; // to compensate for row-gap
     }
-    div {
+    .howto__card {
         width: 85%;
         height: 75px;
         border-radius: 20px;

@@ -16,7 +16,7 @@ $color-text-invert: $color-background-body;
 $color-icons-inactive: #6d6d6d;
 $color-icons-active: $color-primary;
 $btn-gradient: linear-gradient(174deg, $color-secondary 0%, $color-primary 85%, $color-primary 100%);
-$btn-gradient-lighter: linear-gradient(174deg, lighten($color-secondary, 5%) 0%, lighten($color-primary, 5%) 85%, lighten($color-primary, 5%) 100%);
+$btn-gradient-lighter: linear-gradient(174deg, lighten($color-secondary, 10%) 0%, lighten($color-primary, 10%) 85%, lighten($color-primary, 10%) 100%);
 
 
 // $color-heart-icon-gradient:  linear-gradient(0deg, rgba(255,18,222,1) 0%, rgba(156,45,253,1) 100%);
@@ -47,15 +47,6 @@ $font-title: 'Shrikhand', cursive;
 
 }
 
-@mixin btn-style { 
-    height: 50px;
-border-radius:30px;
-border: none;
-color: #fff;
-font-size: 1.02em;
-background: $btn-gradient;
-@include shadow;    
-}
 
 
 

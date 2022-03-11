@@ -12,12 +12,25 @@ h3 {
 
 
 // buttons
+@mixin btn-style { 
+    height: 50px;
+    border-radius:30px;
+    border: none;
+    color: #fff;
+    font-size: 1.02em;
+    background: $btn-gradient;
+    
+    @include shadow;
+    
+    &:hover {
+        // background: lighten($color-primary, 10%);
+        background: linear-gradient(174deg, lighten($color-secondary, 5%) 0%, lighten($color-primary, 5%) 85%, lighten($color-primary, 5%) 100%);
+    }
+}
+
+
 .btn {
     @include btn-style;
-  &--hover {
-    //   background: $btn-gradient-darken;
-    background: lighten($color: $color-primary, $amount: 10%);
-  }
 }
 
 .btn-explore {

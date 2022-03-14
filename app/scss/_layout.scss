@@ -127,6 +127,7 @@ animation-delay:2000ms;
     }
 }
 
+
 // search bar
 .searcharea {
     width: 100%;
@@ -155,6 +156,7 @@ animation-delay:2000ms;
         // }
     }
 }
+
 
 // blurb
 .blurb {
@@ -341,8 +343,13 @@ animation-delay:2000ms;
         width: 100%;
 
         position: absolute;
-        top: 225px;
+        top: 220px;
         z-index: 100;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .menu__header {
             display: flex;
@@ -366,7 +373,7 @@ animation-delay:2000ms;
         }
 
         .menu-cat {
-            
+            width: 100%;
             .menu-cat__header {
                 h2 {
                 text-transform: uppercase;
@@ -384,9 +391,8 @@ animation-delay:2000ms;
 
 
         .menu__menu-items-container {
-     //      & ~ {    // select children properly
-                // opacity: 0;
-     //       }
+            width: 100%;
+
             :nth-child(1) {
                 animation: tadaaa 2s ease-in-out forwards;
                 animation-delay:100ms;
@@ -400,108 +406,110 @@ animation-delay:2000ms;
                 animation-delay:700ms;
             }
     
+            .menu__card {
+                height: 70px;
+                width: 100%;
+                background-color: $color-background-elements;
 
+                border-radius: 20px;
+                padding: 15px 12px;
+                margin: 15px 0;
+                line-height: 1em;
+                @include shadow;
 
-                .menu__card {
-                    border-radius: 20px;
-                    padding: 15px 12px;
-                    margin: 15px 0;
-                    background-color: $color-background-elements;
-                    @include shadow;
-    
-    
-                    line-height: 1em;
-                    height: 70px;
-                    width: 100%;
-    
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                opacity: 0; // to make appear one by one
+
+                position: relative;
+                overflow: hidden;
+                
+                transition: all 0.2s ease-in 0s;
+                
+                //fav check icon
+                &:before {
+                    content: "\f058"; 
+                    font-family: FontAwesome;
+                    font-size: 20px;
+                    color:$color-background-elements;
                     display: flex;
-                    flex-direction: row;
                     align-items: center;
-                    justify-content: space-between;
-    
-                    opacity: 0; // to make appear one by one
-
-
-
-                    position: relative;
-                    overflow: hidden;
-                    
-                    transition: all 0.2s ease-in 0s;
-                    
-                    &:before {
-                        content: "\f058"; 
-                        font-family: FontAwesome;
-                        font-size: 20px;
-                        color:$color-background-elements;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        position: absolute;
-                        top: 0;
-                        right: -50px;
-                        width: 50px;
-                        height: 100%;
-                        background-color: rgba($color-menu-item-overlay-color,0.9);
-                    //   border-radius: 0px $border-radius $border-radius 0px;
-                        transition: all 0.2s linear 0s;
-                        text-align: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0;
+                    right: -55px;
+                    width: 55px;
+                    height: 100%;
+                    background-color: rgba($color-menu-item-overlay-color,0.9);
+                    transition: all 0.3s ease-in-out 0s;
+                    text-align: center;
+                }
+                
+                &:hover {
+                    .price {
+                        transform: translate(-55px);
+                        transition: transform 0.3s ease-in-out 0s;
+                      
                     }
-                    
-                    &:hover {
-                        text-indent: -30px;
-                        
-                        &:before {
+                  .menu__card__txt {
+                    width:72%;
+                    transition: width 0.3s ease-in-out 0s;  // <transition-property> ||<transition-duration> ||<transition-timing-function> || <transition-delay>
+                    }                  
+                    &:before {
                         right: 0;
                         text-indent: 0px;
-                        }
-                    }
-
-                    .menu__card__txt {
-                        display: flex;
-                        flex-direction: column;
-                        width: 100%;
-
-                        
-                        
-                        border: 2px dotted sandybrown;
-    
-                        h3 {
-                            font-size: 17px;
-                            margin: 6px 0;
-                            // font-weight:600;  does not work
-                        }
-                        p {
-                            font-size: 15px;
-                            margin: 0 0 3px 0;
-
-                            width: 98%;
-                            border: 2px dotted darkred;
-
-                            overflow-y: clip;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                            // wrap: nowrap;
-                            // text-overflow: ellipsis;
-                            // overflow-wrap: ellipsis;
-                            // text-overflow: ellipsis;
-                        }
-                    }
-                    .price {
-                        font-weight: bold;
-                        color: $color-background-footer;
-                        width: 15%;
-                        height: 100%;
-
-                        display: flex;
-                        justify-content: flex-end;
-                        align-items: flex-end;
-
-                        border: 2px dotted sandybrown;
                     }
                 }
+
+                .menu__card__txt {
+                    display: flex;
+                    flex-direction: column;
+                    width: 90%;
+                    
+                    border: 2px dotted sandybrown;
+
+                    h3 {
+                        margin: 6px 0;
+                    }
+                    p {
+                        font-size: 15px;
+                        margin: 0 0 3px 0;
+
+                        width: 98%;
+
+                        overflow-y: clip;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        // wrap: nowrap;
+                        // text-overflow: ellipsis;
+                        // overflow-wrap: ellipsis;
+                        // text-overflow: ellipsis;
+                    }
+                }
+                .price {
+                    font-weight: bold;
+                    color: $color-background-footer;
+                    width: 10%;
+                    height: 100%;
+
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+
+                    border: 2px dotted sandybrown;
+                }
+            }
             }
 
         }
+
+        // .btn-order {
+        //     // margin: 10px 0; 
+        //     // text-align: center;
+        // }
     }
 
 
@@ -515,7 +523,9 @@ animation-delay:2000ms;
 
 
 
-
+// main {
+//     visibility: hidden;
+// }
 
 
 // footer
@@ -523,7 +533,14 @@ footer {
     padding: 20px;
     background-color: $color-background-footer;
     color: $color-background-body;
+    width: 100%;
     margin-top: 20px;
+
+    position:absolute;
+    bottom: 0;
+    // clear: both;
+
+    // z-index: 100;
 
     h3 {
         font-family: $font-title;

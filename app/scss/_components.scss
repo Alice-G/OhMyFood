@@ -7,9 +7,13 @@ h2 {
     margin-top: 38px;
 }
 h3 {
-    font-weight: normal;
+    font-size: 18px;
+    font-weight:500;
 }
-
+p {
+    font-size: 20px ;
+    font-weight: 400;
+}
 
 // buttons
 @mixin btn-style { 
@@ -37,7 +41,10 @@ h3 {
     width: 225px;
 }
 
-// .btn-order {}
+.btn-order {
+    width: 180px;
+    margin: 40px 0;
+}
 
 // icons
 i {

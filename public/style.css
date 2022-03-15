@@ -26,6 +26,8 @@ p {
 
 .btn:hover {
   background: linear-gradient(174deg, #ff93e1 0%, #a16be0 85%, #a16be0 100%);
+  -webkit-box-shadow: 2px 5px 8px 0px #8b8b8b;
+          box-shadow: 2px 5px 8px 0px #8b8b8b;
 }
 
 .btn-explore {
@@ -93,6 +95,8 @@ p {
 
 .btn:hover {
   background: linear-gradient(174deg, #ff93e1 0%, #a16be0 85%, #a16be0 100%);
+  -webkit-box-shadow: 2px 5px 8px 0px #8b8b8b;
+          box-shadow: 2px 5px 8px 0px #8b8b8b;
 }
 
 .btn-explore {
@@ -583,6 +587,7 @@ i {
 }
 
 .menu-page .menu .menu__header {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -90,10 +90,7 @@ animation-delay:2000ms;
   
 
 
-//   body 
-// .body--palette {
-//     position: relative;     does not help with the posituioning of footer
-// }
+
 
 // headers
 .header__main {
@@ -588,15 +585,27 @@ footer {
 }
 .footer--main {
 margin-top: 30px; // why this no work?
-
 }
 
 .footer--palette {
-//     margin-top:2000px; // doesn't work 
-
     position: absolute;
     top: 1400px;
     z-index:200;
 }
+.footer--lanote {
+    position: absolute;
+    top: 1480px;
+    z-index:200;
+}
+.footer--francaise {
+        position: absolute;
+        top: 1400px;
+        z-index:200;
+    }
+.footer--delice {
+        position: absolute;
+        top: 1400px;
+        z-index:200;
+    }
 
-
+// délice

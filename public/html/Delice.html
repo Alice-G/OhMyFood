@@ -4,52 +4,150 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oh My Food ! - Le délice des sens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+
+    <!-- icon library -->
+    <script src="https://kit.fontawesome.com/06fb97fbd6.js" crossorigin="anonymous"></script>
+    <title>Oh My Food - Le délice des sens</title>
 </head>
-<body>
+<body class="body--delice">
+    <header class="header__restaurant">
+       
+        <a href="../../index.html" target="_blank"><i class="fa-solid fa-arrow-left"></i></a>
+        <h1>ohmyfood</h1>
+    </header>
 
-    <section class="menu">
-        Le délice des sens
+    <main class="menu-page">
+        <div class="menu-page__pic-container">
+            <img src="../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'un plat de La palette du goût">
+        </div>
+    
+        <section class="menu">
+            <div class="menu__header">
+                <h1>Le délice des sens</h1>
+                <div class="restaurant__heart-container">
+                    <div class="box"><i class="fa-regular fa-heart"></i></div>
+                    <div class="box boxtop"><i class="fa-solid fa-heart"></i></div>
+                </div>
+            </div>
+    
+            <div class="menu-cat">
+                <div class="menu-cat__header">
+                    <h2>Entrées</h2>
+                    <div class="menu-cat__line"></div>
+                </div>
+                
+                <div class="menu__menu-items-container">
+                    <div class="menu__card">
+                        <div class="menu__card__txt">
+                            <h3>Tartare de thon</h3>
+                            <p>Assaisonné au yuzu</p>
+                        </div>
+                        <div class="price">25€</div>
+                    </div>
+                    
+                    <div class="menu__card">
+                        <div class="menu__card__txt">
+                            <h3>Bouchée de homard croustillant</h3>
+                            <p>Et sa farandole de petits légumes</p>
+                        </div>
+                            <div class="price">35€</div>
+                    </div>
+                    
+                    <div class="menu__card">
+                        <div class="menu__card__txt">
+                            <h3>Velouté de cèpes</h3>
+                            <p>Aux truffes</p>
+                        </div>
+                        <div class="price">20€</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="menu-cat">
+                <div class="menu-cat__header">
+                    <h2>Plats</h2>
+                    <div class="menu-cat__line"></div>
+                </div>
+                
+                <div class="menu__menu-items-container">
+                    <div class="menu__card">
+                        <div class="menu__card__txt">
+                            <h3>Poulet rôti aux herbes de Provence</h3>
+                            <p>Et sa crème de truffe</p>
+                        </div>
+                        <div class="price">40€</div>
+                    </div>
 
-Entrées
-Tartare de thon
-Assaisonné au yuzu
-25€
+                    <div class="menu__card">
+                        <div class="menu__card__txt">
+                            <h3>Langouste rôtie </h3>
+                            <p>Et ses légumes de saison</p>
+                        </div>
+                        <div class="price">35€</div>
+                    </div>
 
-Bouchée de homard croustillant 
-Et sa farandole de petits légumes
-35€
+                    <div class="menu__card">
+                        <div class="menu__card__txt">
+                            <h3>Côte de boeuf Angus</h3>
+                            <p>Et sa purée de panais</p>
+                        </div>
+                        <div class="price">44€</div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="menu-cat">
+                <div class="menu-cat__header">
+                    <h2>Desserts</h2>
+                    <div class="menu-cat__line"></div>
+                </div>
+                
+                <div class="menu__menu-items-container">
+                    <div class="menu__card">
+                        <div class="menu__card__txt">
+                            <h3>Farandole de desserts</h3>
+                            <p>Du chef</p>
+                        </div>
+                        <div class="price">18€</div>
+                    </div>
 
-Velouté de cèpes 
-Aux truffes
-20€
-        
-Plats
-Poulet rôti aux herbes de Provence 
-Et sa crème de truffe
-40€
+                    <div class="menu__card">
+                        <div class="menu__card__txt">
+                            <h3>Crème brulée</h3>
+                            <p>Revisitée</p>
+                        </div>
+                        <div class="price">22€</div>
+                    </div>
 
-Langouste rôtie 
-Et ses légumes de saison
-35€
+                    <div class="menu__card">
+                        <div class="menu__card__txt">
+                            <h3>Tiramisu</h3>
+                            <p>À la noisette</p>
+                        </div>
+                        <div class="price">23€</div>
+                    </div>
+                </div>
+            </div>
 
-Côte de boeuf Angus 
-Et sa purée de panais
-44€
+            <button class="btn btn-order">Commander</button>
 
-Desserts
-Farandole de desserts
-Du chef
-18€
+    
+        </section>
+    </main>
 
-Crème brulée 
-Revisitée
-22€
-
-Tiramisu 
-À la noisette
-23€
-    </section>
+    <footer class="footer--delice">
+        <h3>ohmyfood</h3>
+        <p><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
+        <p><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
+        <p>Mentions légales</p>
+        <p><a href="mailto:contact@ohmyfood.com">Contact</a></p>
+    </footer>
     
 </body>
 </html>

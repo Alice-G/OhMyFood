@@ -961,4 +961,22 @@ footer p a {
   top: 1400px;
   z-index: 200;
 }
+
+.footer--lanote {
+  position: absolute;
+  top: 1480px;
+  z-index: 200;
+}
+
+.footer--francaise {
+  position: absolute;
+  top: 1400px;
+  z-index: 200;
+}
+
+.footer--delice {
+  position: absolute;
+  top: 1400px;
+  z-index: 200;
+}
 /*# sourceMappingURL=style.css.map */

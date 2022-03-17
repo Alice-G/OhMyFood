@@ -4,51 +4,152 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/style.css">
+
+    <!-- icon library -->
+    <script src="https://kit.fontawesome.com/06fb97fbd6.js" crossorigin="anonymous"></script>
     <title>Oh My Food - À La Française</title>
 </head>
-<body>
+<body class="body--lanote">
+    <header class="header__restaurant">
+      <a href="../../index.html" target="_blank"><i class="fa-solid fa-arrow-left"></i></a>
+        <h1>ohmyfood</h1>
+    </header>
+    
+    <main class="menu-page">
+      <div class="menu-page__pic-container">
+          <img src="../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un plat de La palette du goût">
+      </div>
   
-  <section class="menu">
-    À la française
+      <section class="menu">
+          <div class="menu__header">
+              <h1>À la française</h1>
+              <div class="restaurant__heart-container">
+                  <div class="box"><i class="fa-regular fa-heart"></i></div>
+                  <div class="box boxtop"><i class="fa-solid fa-heart"></i></div>
+              </div>
+          </div>
+      
 
-Entrées
-Tartare de poulpe acidulé
-Aux zestes d'orange
-25€
 
-Velouté de légumes d'antan
-Carotte, panais, topinambour
-35€
 
-Soupe à l'oignon
-Revisitée
-20€
+      <div class="menu-cat">
+        <div class="menu-cat__header">
+            <h2>Entrées</h2>
+            <div class="menu-cat__line"></div>
+        </div>
+        
+        <div class="menu__menu-items-container">
+            <div class="menu__card">
+                <div class="menu__card__txt">
+                    <h3>Tartare de poulpe acidulé</h3>
+                    <p>Aux zestes d'orange</p>
+                </div>
+                <div class="price">25€</div>
+            </div>
+            
+            <div class="menu__card">
+                <div class="menu__card__txt">
+                    <h3>Velouté de légumes d'antan</h3>
+                    <p>Carotte, panais, topinambour</p>
+                </div>
+                    <div class="price">35€</div>
+            </div>
+            
+            <div class="menu__card">
+                <div class="menu__card__txt">
+                    <h3>Soupe à l'oignon</h3>
+                    <p>Revisitée</p>
+                </div>
+                <div class="price">20€</div>
+            </div>
+        </div>
+      </div>
 
-Plats
-Coquilles Saint-Jacques
-Accompagnées d'une purée de panais
-40€
 
-Magret de canard
-Et parmentier de pommes de terre
-35€
+      <div class="menu-cat">
+        <div class="menu-cat__header">
+            <h2>Plats</h2>
+            <div class="menu-cat__line"></div>
+        </div>
+        
+        <div class="menu__menu-items-container">
+            <div class="menu__card">
+                <div class="menu__card__txt">
+                    <h3>Coquilles Saint-Jacques</h3>
+                    <p>Accompagnées d'une purée de panais</p>
+                </div>
+                <div class="price">40€</div>
+            </div>
 
-Pigeonneau d’Ille-et-Vilaine
-Sur son lit de gnocchis aux légumes
-44€
+            <div class="menu__card">
+                <div class="menu__card__txt">
+                    <h3>Magret de canard</h3>
+                    <p>Et parmentier de pommes de terre</p>
+                </div>
+                <div class="price">35€</div>
+            </div>
 
-Desserts
-Pétales de violettes glacés
-Et purée de noisettes
-18€
+            <div class="menu__card">
+                <div class="menu__card__txt">
+                    <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                    <p>Sur son lit de gnocchis aux légumes</p>
+                </div>
+                <div class="price">44€</div>
+            </div>
+        </div>
+      </div>
 
-Fondant au chocolat
-Revisité
-22€
 
-Millefeuille croustillant
-Myrtilles et pâte d’amande
-23€
-</section> 
+      <div class="menu-cat">
+        <div class="menu-cat__header">
+            <h2>Desserts</h2>
+            <div class="menu-cat__line"></div>
+        </div>
+        
+        <div class="menu__menu-items-container">
+            <div class="menu__card">
+                <div class="menu__card__txt">
+                    <h3>Pétales de violettes glacés</h3>
+                    <p>Et purée de noisettes</p>
+                </div>
+                <div class="price">18€</div>
+            </div>
+
+            <div class="menu__card">
+                <div class="menu__card__txt">
+                    <h3>Fondant au chocolat</h3>
+                    <p>Revisité</p>
+                </div>
+                <div class="price">22€</div>
+            </div>
+
+            <div class="menu__card">
+                <div class="menu__card__txt">
+                    <h3>Millefeuille croustillant</h3>
+                    <p>Myrtilles et pâte d’amande</p>
+                </div>
+                <div class="price">23€</div>
+            </div>
+        </div>
+      </div>
+
+      <button class="btn btn-order">Commander</button>
+
+
+      </section>
+      </main>
+
+<footer class="footer--francaise">
+<h3>ohmyfood</h3>
+<p><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
+<p><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</p>
+<p>Mentions légales</p>
+<p><a href="mailto:contact@ohmyfood.com">Contact</a></p>
+</footer>
+
 </body>
 </html>

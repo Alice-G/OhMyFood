@@ -33,13 +33,13 @@ p {
     }
 }
 
-
 .btn {
-    @include btn-style;
+    @include btn-style; //the hover part of this doesn't work on index
+    // border: 1px dashed red; this does work
 }
 
 .btn-explore {
-    width: 225px;
+    width: 225px; //this works
 }
 
 .btn-order {
@@ -47,23 +47,65 @@ p {
     margin: 40px 0;
 }
 
-// icons
+
+
+                                    // icons
+// how to icons
 i {
     font-size: 18px;
-    // width: 7px;
 }
 
-// .heart {
-
-// }
 
 
-// shape 
-// gradient
-// shadow
-// active state (in hover?)
-// color of font 
+// <div class="restaurant__heart-container ">
+//     <div class="box"><i class="fa-regular fa-heart "></i></div>
+//     <div class="box boxtop"><i class="fa-solid fa-heart top"></i></div>
+// </div>
+@keyframes bounce {
+    70% {
+        font-size: 30px;
+    }
+    100% {
+        font-size:25px;
+    }
+}
 
-// }
+.restaurant__heart-container {
 
-// and in layout, padding?
+    .box {
+        display:flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        position: absolute;
+
+        i {
+          font-size: 25px;
+        }
+    }
+    .boxtop i{
+        // MAKE THIS ACTUAL $ GRADIENT
+        background: linear-gradient(0deg, $color-secondary 0%, $color-primary 75%, $color-primary 100%);
+        background-clip: text;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        z-index:10;
+
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .boxtop {
+        &:hover i {
+            opacity:1;
+            transition: opacity 0.5s ease-in;
+            animation: bounce 0.5s ease-in;
+        }    
+    }
+    
+}
+
+

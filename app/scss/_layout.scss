@@ -138,24 +138,21 @@ animation-delay:2000ms;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    input[type=text] {
-        // text-align: center;
-        // width: 90px;
-        border: none;
-        background-color: $color-background-searchbar;
-        font-size: 16px;
-        // &:active {
-        //     background-color: seagreen;
-        //     border: none;
-        // }
-        // &:focus {
-        //     background-color: violet;
-        //     border: none;
-        // }
-        // &:active, &:focus {
-        //     background-color: aquamarine;
-        // }
+    .searchbar {
+        width: 150px;
+        i {
+            width: 25px;
+        }
+        input[type=text] {
+        
+            width: 120px;
+
+            border: none;
+            background-color: $color-background-searchbar;
+            font-size: 16px;
+        }
     }
+    
 }
 
 

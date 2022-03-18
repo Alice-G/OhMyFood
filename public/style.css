@@ -454,7 +454,16 @@ i {
           align-items: center;
 }
 
-.searcharea input[type=text] {
+.searcharea .searchbar {
+  width: 150px;
+}
+
+.searcharea .searchbar i {
+  width: 25px;
+}
+
+.searcharea .searchbar input[type=text] {
+  width: 120px;
   border: none;
   background-color: #dedede;
   font-size: 16px;

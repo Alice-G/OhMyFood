@@ -37,11 +37,9 @@ p {
     @include btn-style; //the hover part of this doesn't work on index
     // border: 1px dashed red; this does work
 }
-
 .btn-explore {
     width: 225px; //this works
 }
-
 .btn-order {
     width: 180px;
     margin: 40px 0;
@@ -105,7 +103,4 @@ i {
             animation: bounce 0.5s ease-in;
         }    
     }
-    
 }
-
-

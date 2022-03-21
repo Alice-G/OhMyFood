@@ -228,6 +228,7 @@ i {
   100% {
     display: none;
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -238,6 +239,7 @@ i {
   100% {
     display: none;
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -427,6 +429,7 @@ i {
 
 .header__restaurant a i {
   font-size: 22px;
+  width: 50px;
 }
 
 .header__restaurant h1 {

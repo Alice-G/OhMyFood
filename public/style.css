@@ -1185,7 +1185,7 @@ footer p a {
 
 @media (min-width: 1200px) {
   .footer--palette {
-    top: 800px;
+    top: 910px;
   }
 }
 
@@ -1209,7 +1209,7 @@ footer p a {
 
 @media (min-width: 1200px) {
   .footer--lanote {
-    top: 900px;
+    top: 1020px;
   }
 }
 
@@ -1233,7 +1233,7 @@ footer p a {
 
 @media (min-width: 1200px) {
   .footer--francaise {
-    top: 800px;
+    top: 910px;
   }
 }
 
@@ -1257,7 +1257,7 @@ footer p a {
 
 @media (min-width: 1200px) {
   .footer--delice {
-    top: 800px;
+    top: 910px;
   }
 }
 /*# sourceMappingURL=style.css.map */

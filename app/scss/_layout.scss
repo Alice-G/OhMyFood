@@ -622,11 +622,7 @@ animation-delay:2000ms;
             }
             }
         }
-    }
-
-
-
-        
+    }     
 }
 
     
@@ -670,7 +666,7 @@ margin-top: 30px; // why this no work?
         top: 1580px;
     }
     @include for-desktop-up {
-        top: 800px;
+        top: 910px;
     }
 }
 .footer--lanote {
@@ -684,7 +680,7 @@ margin-top: 30px; // why this no work?
         top: 1685px;
     }
     @include for-desktop-up {
-        top: 900px;
+        top: 1020px;
     }
 
 }
@@ -699,7 +695,7 @@ margin-top: 30px; // why this no work?
             top: 1575px;
         }
         @include for-desktop-up {
-            top: 800px;
+            top: 910px;
         }
     }
 .footer--delice {
@@ -713,8 +709,6 @@ margin-top: 30px; // why this no work?
             top: 1575px;
         }
         @include for-desktop-up {
-            top: 800px;
+            top: 910px;
         }
     }
-
-// délice

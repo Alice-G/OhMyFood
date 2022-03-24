@@ -10,7 +10,7 @@
     100%{
       display: none;
       opacity: 0;
-      z-index: -1; //ERMERGERD IT WAS YOUUUUUUU
+      z-index: -1; //ERMERGERD
     }
   }
  @keyframes spin {
@@ -140,6 +140,12 @@ animation-delay:2000ms;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    @include for-desktop-up {
+        width: 35%;
+        margin:0 auto;
+        box-shadow: inset 0px 0px 10px 1px darkgrey ;
+    }
     .searchbar {
         width: 150px;
         i {
@@ -152,30 +158,48 @@ animation-delay:2000ms;
             border: none;
             background-color: $color-background-searchbar;
             font-size: 16px;
+            &:active, &:focus {
+                outline: none;
+            }
         }
     }
     
 }
 
+//          MAIN
+.home-toppage {
+    @include for-desktop-up {
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        margin-top: 20px;
 
+    }
+}
 // blurb
 .blurb {
+
     width: 100%;
     text-align: center;
     height: 250px;
-    // padding:0 6% 20px 6%;
     padding: 0 6%;
-    // padding: 15%;
+    @include for-desktop-up {
+        width: 46%;
+        background-color: $color-background-elements;
+        align-self: center;
+        border-radius: 25px;
+        @include shadow;
+
+        height: 270px;
+
+    }
     h2 {
         padding: 0 10%;
     }
     p {
     font-size: 18px;
     }
-    & .btn-explore {
-        // does not work 
-        margin-bottom: 20px;
-    }
+           
 }
 
 // How To
@@ -187,6 +211,16 @@ animation-delay:2000ms;
     flex-direction: column;
     align-items: center;
     row-gap: 25px;
+    @include for-desktop-up {
+        width: 46%;
+        padding: 30px 0 40px 0;
+        border-radius: 25px;
+
+        @include shadow;
+        h2 {
+            margin-top: 0;
+        }
+    }
     h2 {
         padding-left: 20px;
         align-self: flex-start;
@@ -235,7 +269,6 @@ animation-delay:2000ms;
     .fa-solid {
         color: $color-icons-inactive;
         margin: 20px;
-
     }
 
 }
@@ -252,17 +285,44 @@ animation-delay:2000ms;
     // margin-bottom: 20px; this no work
     padding-bottom: 30px; //but this does
 
+    @include for-desktop-up {
+        padding: 0 30px 40px 30px;
+    }
     h2 {
-        padding: 14px 0 0 20px;
-        align-self: flex-start;
-        margin-bottom: 0; // to compensate for row-gap
+            padding: 14px 0 0 20px;
+            align-self: flex-start;
+            margin-bottom: 0; // to compensate for row-gap
+            @include for-desktop-up {
+                width: 100%;
+                padding: 0;
+            }
     }
 
-    .restaucard {
+    .restau__card-container {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+
+        @include for-desktop-up {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            row-gap: 50px;
+            
+            }
+        .restaucard {
         width:89%;
         background-color: $color-background-elements;
         border-radius: 16px;
         @include shadow;
+
+        @include for-desktop-up {
+            width: 40%;
+        }
 
         .restaurant__pic-container {
             position: relative;
@@ -274,7 +334,6 @@ animation-delay:2000ms;
                 background-color: $color-btn-new; 
                 height: 28px;
                 width: 80px;
-                // font-weight: bold; ??????
                 font-size: 14px;
                 color: $color-btn-text; 
                 border-radius: 3px;
@@ -287,10 +346,7 @@ animation-delay:2000ms;
                 position: absolute;
                 top: 12px;
                 right: 12px;
-
-                // @include shadow;
             }
-
             img {
                 width: 100%;
                 height: 100%;
@@ -300,7 +356,6 @@ animation-delay:2000ms;
         }
 
         .restaurant-cardbody  {
-            // rule 
             padding: 0 15px;
             display: flex;
             flex-direction: row;
@@ -310,32 +365,26 @@ animation-delay:2000ms;
                 display: flex;
                 flex-direction: column;
 
-                height: 100%; //
-
-                
-
+                height: 100%;
                 h1 {
                 font-size: 18px;
                 margin-bottom: -15px;
                 }
-
                 p {
                     font-size: 17px;
                 }
             }
-            
             .restaurant__heart-container {
                 align-self: flex-end;
                 position: relative;
                 height:65px;
                 width:40px;
-              
-                
-               
-                
                 display: flex;
             }
         }  
+    }
+
+
     }
 }
 
@@ -380,6 +429,9 @@ animation-delay:2000ms;
         justify-content: center;
         align-items: center;
 
+        @include for-desktop-up {
+            padding: 10px 25px;
+        }
         .menu__header {
 
             width: 100%;
@@ -401,10 +453,14 @@ animation-delay:2000ms;
                 padding-top:25px ;
             }
         }
-
         .menu-cat {
             width: 100%;
             .menu-cat__header {
+                width: 75px;
+
+                @include for-tablet-portrait-up {
+                 margin: 0 auto;
+                }
                 h2 {
                 text-transform: uppercase;
                 font-size: 16px;
@@ -416,10 +472,11 @@ animation-delay:2000ms;
                     height: 3px;
                     margin: 0;
                     background-color: $color-menu-deco-bar;
+                    @include for-tablet-portrait-up {
+                         margin: 0 auto;
+                        }
                 }
             }
-
-
         .menu__menu-items-container {
             width: 100%;
 
@@ -434,6 +491,27 @@ animation-delay:2000ms;
             :nth-child(3) {
                 animation: tadaaa 2s ease-in-out forwards;
                 animation-delay:700ms;
+            }
+            :nth-child(4) {
+                animation: tadaaa 2s ease-in-out forwards;
+                animation-delay:900ms;
+            }
+
+            @include for-tablet-portait-only {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            @include for-tablet-landscape-only {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            @include for-desktop-up {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                column-gap: 15px;
             }
     
             .menu__card {
@@ -459,7 +537,19 @@ animation-delay:2000ms;
                 
                 transition: all 0.2s ease-in 0s;
                 
-                //fav check icon
+                @include for-tablet-portait-only {
+                    height: 80px;
+                    width: 80%;
+                }
+                @include for-tablet-landscape-only {
+                    height: 80px;
+                    width: 75%;
+                }
+                @include for-desktop-up {
+                    height: 80px;
+                    width: 30%;
+
+                }
                 &:before {
                     content: "\f058"; 
                     font-family: FontAwesome;
@@ -477,13 +567,10 @@ animation-delay:2000ms;
                     transition: all 0.3s ease-in-out 0s;
                     text-align: center;
                 }
-                
                 &:hover {
-
                     .price {
                         transform: translate(-55px);
                         transition: transform 0.3s ease-in-out 0s;
-                      
                     }
                   .menu__card__txt {
                     width:72%;
@@ -502,6 +589,10 @@ animation-delay:2000ms;
 
                     h3 {
                         margin: 6px 0;
+
+                        overflow-y: clip;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
                     p {
                         font-size: 15px;
@@ -530,13 +621,7 @@ animation-delay:2000ms;
                 }
             }
             }
-
         }
-
-        // .btn-order {
-        //     // margin: 10px 0; 
-        //     // text-align: center;
-        // }
     }
 
 
@@ -545,14 +630,6 @@ animation-delay:2000ms;
 }
 
     
-
-
-
-
-
-// main {
-//     visibility: hidden;
-// }
 
 
 // footers
@@ -585,26 +662,59 @@ footer {
 .footer--main {
 margin-top: 30px; // why this no work?
 }
-
 .footer--palette {
     position: absolute;
     top: 1400px;
     z-index:200;
+    @include for-tablet-portrait-up {
+        top: 1580px;
+    }
+    @include for-desktop-up {
+        top: 800px;
+    }
 }
 .footer--lanote {
     position: absolute;
     top: 1480px;
     z-index:200;
+    @include for-tablet-portrait-up {
+        top: 1685px;
+    }
+    @include for-tablet-landscape-only {
+        top: 1685px;
+    }
+    @include for-desktop-up {
+        top: 900px;
+    }
+
 }
 .footer--francaise {
         position: absolute;
         top: 1400px;
         z-index:200;
+        @include for-tablet-portrait-up {
+            top: 1575px;
+        }
+        @include for-tablet-landscape-only {
+            top: 1575px;
+        }
+        @include for-desktop-up {
+            top: 800px;
+        }
     }
 .footer--delice {
         position: absolute;
         top: 1400px;
         z-index:200;
+        @include for-tablet-portrait-up {
+            top: 1575px;
+        }
+        @include for-tablet-landscape-only {
+            top: 1575px;
+        }
+        @include for-desktop-up {
+            top: 800px;
+        }
     }
 
 // délice

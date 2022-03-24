@@ -17,6 +17,8 @@ $color-icons-inactive: #6d6d6d;
 $color-icons-active: $color-primary;
 $btn-gradient: linear-gradient(174deg, $color-secondary 0%, $color-primary 85%, $color-primary 100%);
 $btn-gradient-lighter: linear-gradient(174deg, lighten($color-secondary, 10%) 0%, lighten($color-primary, 10%) 85%, lighten($color-primary, 10%) 100%);
+$color-heart-icon-gradient: linear-gradient(0deg, $color-secondary 0%, $color-primary 75%, $color-primary 100%);
+
 
 
 // $color-heart-icon-gradient:  linear-gradient(0deg, rgba(255,18,222,1) 0%, rgba(156,45,253,1) 100%);
@@ -48,23 +50,35 @@ $font-title: 'Shrikhand', cursive;
 }
 
 
+//                      BREAKPOINTS
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-portait-only {
+    @media (min-width: 600px) and (max-width: 899px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-tablet-landscape-only {
+    @media (min-width: 900px) and (max-width: 1199px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
 
 
 
 
-
-// As far as I know you can't import fonts using @import in SCSS. You can include fonts using @font-face. For example:
-
-// @font-face {
-//     font-family: 'Open Sans';
-//     src: url(path/to/file) format(Example: 'truetype' or 'opentype' depending on the file extension of your font);
-// }
-
-
-// // USAGE
-// body {
-//     font-family: 'Open Sans', sans-serif;
-// }
-
-
-
+//   .test {
+//     background: lightgreen;
+//     @include for-tablet-landscape-only {
+//       here make changes in height of cards
+//     }
+//     @include for-desktop-up {
+//       style for desktop
+//     }
+//   }

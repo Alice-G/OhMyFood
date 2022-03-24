@@ -27,18 +27,16 @@ p {
     @include shadow;
     
     &:hover {
-        // background: lighten($color-primary, 10%);
         background: linear-gradient(174deg, lighten($color-secondary, 5%) 0%, lighten($color-primary, 5%) 85%, lighten($color-primary, 5%) 100%);
         @include shadow-darker;
     }
 }
 
 .btn {
-    @include btn-style; //the hover part of this doesn't work on index
-    // border: 1px dashed red; this does work
+    @include btn-style; 
 }
 .btn-explore {
-    width: 225px; //this works
+    width: 225px; 
 }
 .btn-order {
     width: 180px;
@@ -69,21 +67,17 @@ i {
 }
 
 .restaurant__heart-container {
-
     .box {
         display:flex;
         justify-content: flex-start;
         align-items: flex-start;
-
         position: absolute;
-
         i {
           font-size: 25px;
         }
     }
     .boxtop i{
-        // MAKE THIS ACTUAL $ GRADIENT
-        background: linear-gradient(0deg, $color-secondary 0%, $color-primary 75%, $color-primary 100%);
+        background: $color-heart-icon-gradient;
         background-clip: text;
         color: transparent;
         background-clip: text;

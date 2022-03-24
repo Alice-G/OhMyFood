@@ -457,6 +457,15 @@ i {
           align-items: center;
 }
 
+@media (min-width: 1200px) {
+  .searcharea {
+    width: 35%;
+    margin: 0 auto;
+    -webkit-box-shadow: inset 0px 0px 10px 1px darkgrey;
+            box-shadow: inset 0px 0px 10px 1px darkgrey;
+  }
+}
+
 .searcharea .searchbar {
   width: 150px;
 }
@@ -472,11 +481,44 @@ i {
   font-size: 16px;
 }
 
+.searcharea .searchbar input[type=text]:active, .searcharea .searchbar input[type=text]:focus {
+  outline: none;
+}
+
+@media (min-width: 1200px) {
+  .home-toppage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 20px;
+  }
+}
+
 .blurb {
   width: 100%;
   text-align: center;
   height: 250px;
   padding: 0 6%;
+}
+
+@media (min-width: 1200px) {
+  .blurb {
+    width: 46%;
+    background-color: #fdfdfd;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    border-radius: 25px;
+    -webkit-box-shadow: 2px 5px 8px 0px #bebebe;
+            box-shadow: 2px 5px 8px 0px #bebebe;
+    height: 270px;
+  }
 }
 
 .blurb h2 {
@@ -485,10 +527,6 @@ i {
 
 .blurb p {
   font-size: 18px;
-}
-
-.blurb .btn-explore {
-  margin-bottom: 20px;
 }
 
 .howto {
@@ -506,6 +544,19 @@ i {
       -ms-flex-align: center;
           align-items: center;
   row-gap: 25px;
+}
+
+@media (min-width: 1200px) {
+  .howto {
+    width: 46%;
+    padding: 30px 0 40px 0;
+    border-radius: 25px;
+    -webkit-box-shadow: 2px 5px 8px 0px #bebebe;
+            box-shadow: 2px 5px 8px 0px #bebebe;
+  }
+  .howto h2 {
+    margin-top: 0;
+  }
 }
 
 .howto h2 {
@@ -585,6 +636,12 @@ i {
   padding-bottom: 30px;
 }
 
+@media (min-width: 1200px) {
+  .restaurants {
+    padding: 0 30px 40px 30px;
+  }
+}
+
 .restaurants h2 {
   padding: 14px 0 0 20px;
   -ms-flex-item-align: start;
@@ -592,7 +649,48 @@ i {
   margin-bottom: 0;
 }
 
-.restaurants .restaucard {
+@media (min-width: 1200px) {
+  .restaurants h2 {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.restaurants .restau__card-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 15px;
+}
+
+@media (min-width: 1200px) {
+  .restaurants .restau__card-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    row-gap: 50px;
+  }
+}
+
+.restaurants .restau__card-container .restaucard {
   width: 89%;
   background-color: #fdfdfd;
   border-radius: 16px;
@@ -600,13 +698,19 @@ i {
           box-shadow: 2px 5px 8px 0px #bebebe;
 }
 
-.restaurants .restaucard .restaurant__pic-container {
+@media (min-width: 1200px) {
+  .restaurants .restau__card-container .restaucard {
+    width: 40%;
+  }
+}
+
+.restaurants .restau__card-container .restaucard .restaurant__pic-container {
   position: relative;
   text-align: center;
   height: 175px;
 }
 
-.restaurants .restaucard .restaurant__pic-container .tag-new {
+.restaurants .restau__card-container .restaucard .restaurant__pic-container .tag-new {
   background-color: #99E2D0;
   height: 28px;
   width: 80px;
@@ -628,7 +732,7 @@ i {
   right: 12px;
 }
 
-.restaurants .restaucard .restaurant__pic-container img {
+.restaurants .restau__card-container .restaucard .restaurant__pic-container img {
   width: 100%;
   height: 100%;
   border-radius: 16px 16px 0 0;
@@ -636,7 +740,7 @@ i {
      object-fit: cover;
 }
 
-.restaurants .restaucard .restaurant-cardbody {
+.restaurants .restau__card-container .restaucard .restaurant-cardbody {
   padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -650,7 +754,7 @@ i {
           justify-content: space-between;
 }
 
-.restaurants .restaucard .restaurant-cardbody .restaurant__cardtxt {
+.restaurants .restau__card-container .restaucard .restaurant-cardbody .restaurant__cardtxt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -661,16 +765,16 @@ i {
   height: 100%;
 }
 
-.restaurants .restaucard .restaurant-cardbody .restaurant__cardtxt h1 {
+.restaurants .restau__card-container .restaucard .restaurant-cardbody .restaurant__cardtxt h1 {
   font-size: 18px;
   margin-bottom: -15px;
 }
 
-.restaurants .restaucard .restaurant-cardbody .restaurant__cardtxt p {
+.restaurants .restau__card-container .restaucard .restaurant-cardbody .restaurant__cardtxt p {
   font-size: 17px;
 }
 
-.restaurants .restaucard .restaurant-cardbody .restaurant__heart-container {
+.restaurants .restau__card-container .restaucard .restaurant-cardbody .restaurant__heart-container {
   -ms-flex-item-align: end;
       align-self: flex-end;
   position: relative;
@@ -742,6 +846,12 @@ i {
           align-items: center;
 }
 
+@media (min-width: 1200px) {
+  .menu-page .menu {
+    padding: 10px 25px;
+  }
+}
+
 .menu-page .menu .menu__header {
   width: 100%;
   padding-right: 30px;
@@ -776,6 +886,16 @@ i {
   width: 100%;
 }
 
+.menu-page .menu .menu-cat .menu-cat__header {
+  width: 75px;
+}
+
+@media (min-width: 600px) {
+  .menu-page .menu .menu-cat .menu-cat__header {
+    margin: 0 auto;
+  }
+}
+
 .menu-page .menu .menu-cat .menu-cat__header h2 {
   text-transform: uppercase;
   font-size: 16px;
@@ -788,6 +908,12 @@ i {
   height: 3px;
   margin: 0;
   background-color: #99E2D0;
+}
+
+@media (min-width: 600px) {
+  .menu-page .menu .menu-cat .menu-cat__header .menu-cat__line {
+    margin: 0 auto;
+  }
 }
 
 .menu-page .menu .menu-cat .menu__menu-items-container {
@@ -813,6 +939,59 @@ i {
           animation: tadaaa 2s ease-in-out forwards;
   -webkit-animation-delay: 700ms;
           animation-delay: 700ms;
+}
+
+.menu-page .menu .menu-cat .menu__menu-items-container :nth-child(4) {
+  -webkit-animation: tadaaa 2s ease-in-out forwards;
+          animation: tadaaa 2s ease-in-out forwards;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .menu-page .menu .menu-cat .menu__menu-items-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .menu-page .menu .menu-cat .menu__menu-items-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-page .menu .menu-cat .menu__menu-items-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
 }
 
 .menu-page .menu .menu-cat .menu__menu-items-container .menu__card {
@@ -843,6 +1022,27 @@ i {
   overflow: hidden;
   -webkit-transition: all 0.2s ease-in 0s;
   transition: all 0.2s ease-in 0s;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .menu-page .menu .menu-cat .menu__menu-items-container .menu__card {
+    height: 80px;
+    width: 80%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .menu-page .menu .menu-cat .menu__menu-items-container .menu__card {
+    height: 80px;
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-page .menu .menu-cat .menu__menu-items-container .menu__card {
+    height: 80px;
+    width: 30%;
+  }
 }
 
 .menu-page .menu .menu-cat .menu__menu-items-container .menu__card:before {
@@ -903,6 +1103,9 @@ i {
 
 .menu-page .menu .menu-cat .menu__menu-items-container .menu__card .menu__card__txt h3 {
   margin: 6px 0;
+  overflow-y: clip;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu-page .menu .menu-cat .menu__menu-items-container .menu__card .menu__card__txt p {
@@ -974,10 +1177,40 @@ footer p a {
   z-index: 200;
 }
 
+@media (min-width: 600px) {
+  .footer--palette {
+    top: 1580px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer--palette {
+    top: 800px;
+  }
+}
+
 .footer--lanote {
   position: absolute;
   top: 1480px;
   z-index: 200;
+}
+
+@media (min-width: 600px) {
+  .footer--lanote {
+    top: 1685px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .footer--lanote {
+    top: 1685px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer--lanote {
+    top: 900px;
+  }
 }
 
 .footer--francaise {
@@ -986,9 +1219,45 @@ footer p a {
   z-index: 200;
 }
 
+@media (min-width: 600px) {
+  .footer--francaise {
+    top: 1575px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .footer--francaise {
+    top: 1575px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer--francaise {
+    top: 800px;
+  }
+}
+
 .footer--delice {
   position: absolute;
   top: 1400px;
   z-index: 200;
+}
+
+@media (min-width: 600px) {
+  .footer--delice {
+    top: 1575px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .footer--delice {
+    top: 1575px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer--delice {
+    top: 800px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

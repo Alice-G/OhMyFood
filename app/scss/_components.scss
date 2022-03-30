@@ -2,10 +2,10 @@
 @import "base";
 
 // headings
-h2 {
-    font-size: 23px;
-    margin-top: 38px;
-}
+// h2 {
+//     // font-size: 23px;
+//     // margin-top: 38px;
+// }
 h3 {
     font-size: 18px;
     font-weight:500;
@@ -53,10 +53,6 @@ i {
 
 
 
-// <div class="restaurant__heart-container ">
-//     <div class="box"><i class="fa-regular fa-heart "></i></div>
-//     <div class="box boxtop"><i class="fa-solid fa-heart top"></i></div>
-// </div>
 @keyframes bounce {
     70% {
         font-size: 30px;

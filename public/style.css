@@ -14,7 +14,7 @@ p {
   border: none;
   color: #fff;
   font-size: 1.02em;
-  background: linear-gradient(174deg, #FF79DA 0%, #9356DC 85%, #9356DC 100%);
+  background: linear-gradient(174deg, #ff79da 0%, #9356dc 85%, #9356dc 100%);
   -webkit-box-shadow: 2px 5px 8px 0px #bebebe;
           box-shadow: 2px 5px 8px 0px #bebebe;
 }
@@ -74,8 +74,8 @@ i {
 }
 
 .restaurant__heart-container .boxtop i {
-  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(75%, #9356DC), to(#9356DC));
-  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 75%, #9356DC 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), color-stop(75%, #9356dc), to(#9356dc));
+  background: linear-gradient(0deg, #ff79da 0%, #9356dc 75%, #9356dc 100%);
   background-clip: text;
   color: transparent;
   background-clip: text;
@@ -137,7 +137,7 @@ p {
   border: none;
   color: #fff;
   font-size: 1.02em;
-  background: linear-gradient(174deg, #FF79DA 0%, #9356DC 85%, #9356DC 100%);
+  background: linear-gradient(174deg, #ff79da 0%, #9356dc 85%, #9356dc 100%);
   -webkit-box-shadow: 2px 5px 8px 0px #bebebe;
           box-shadow: 2px 5px 8px 0px #bebebe;
 }
@@ -188,8 +188,8 @@ i {
 }
 
 .restaurant__heart-container .boxtop i {
-  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), color-stop(75%, #9356DC), to(#9356DC));
-  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 75%, #9356DC 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), color-stop(75%, #9356dc), to(#9356dc));
+  background: linear-gradient(0deg, #ff79da 0%, #9356dc 75%, #9356dc 100%);
   background-clip: text;
   color: transparent;
   background-clip: text;
@@ -298,7 +298,7 @@ i {
 .loading__spinner > span:after,
 .loading__spinner > span > span:before,
 .loading__spinner > span > span:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 27px;
@@ -316,7 +316,7 @@ i {
 }
 
 .loading__spinner:before {
-  background: #9356DC;
+  background: #9356dc;
 }
 
 .loading__spinner:after {
@@ -457,14 +457,14 @@ i {
   width: 25px;
 }
 
-.searcharea .searchbar input[type=text] {
+.searcharea .searchbar input[type="text"] {
   width: 120px;
   border: none;
   background-color: #dedede;
   font-size: 16px;
 }
 
-.searcharea .searchbar input[type=text]:active, .searcharea .searchbar input[type=text]:focus {
+.searcharea .searchbar input[type="text"]:active, .searcharea .searchbar input[type="text"]:focus {
   outline: none;
 }
 
@@ -553,7 +553,6 @@ i {
   width: 85%;
   height: 75px;
   border-radius: 20px;
-  background-color: #f0f0f0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -572,7 +571,7 @@ i {
 }
 
 .howto .howto__card:hover .fa-solid {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .howto .howto__card > * {
@@ -580,8 +579,12 @@ i {
   left: -12px;
 }
 
+.howto .highlight {
+  background-color: white;
+}
+
 .howto .lilbtn {
-  background-color: #9356DC;
+  background-color: #9356dc;
   width: 25px;
   height: 25px;
   border-radius: 100%;
@@ -694,13 +697,12 @@ i {
 }
 
 .restaurants .restau__card-container .restaucard .restaurant__pic-container .tag-new {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   height: 28px;
   width: 80px;
   font-size: 14px;
   color: #299077;
   border-radius: 3px;
-  border: 1px outset;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -890,7 +892,7 @@ i {
   width: 40px;
   height: 3px;
   margin: 0;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 
 @media (min-width: 600px) {

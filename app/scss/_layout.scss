@@ -1,43 +1,45 @@
 // all the Sass code handling the layout, which is the container & grid systems, header, footer,etc
 
-@import 'components';
+@import "components";
 
 //spinner
-@keyframes disappear{
-    0%{
-      opacity: 1;
+@keyframes disappear {
+    0% {
+        opacity: 1;
     }
-    100%{
-      display: none;
-      opacity: 0;
-      z-index: -1; //ERMERGERD
+    100% {
+        display: none;
+        opacity: 0;
+        z-index: -1; //ERMERGERD
     }
-  }
- @keyframes spin {
-    to { transform: rotate(1turn); }
+}
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
 }
 .spinner-container {
-height:100vh;
-width:100%;
-display:flex;
-justify-content: center;
-align-items: center;
-background:linear-gradient(312deg, lighten($color-tertiary , 1) 0%, lighten($color-secondary, 5) 100%);
-z-index:100;
-position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(312deg, lighten($color-tertiary, 1) 0%, lighten($color-secondary, 5) 100%);
+    z-index: 100;
+    position: fixed;
 
-animation-name: disappear;
-animation-duration: 1800ms;
-animation-fill-mode: forwards;
-animation-delay:2000ms;
+    animation-name: disappear;
+    animation-duration: 1800ms;
+    animation-fill-mode: forwards;
+    animation-delay: 2000ms;
 
     .loading {
         display: inline-flex;
-        align-items: center;        
+        align-items: center;
     }
 }
-  
-.loading__spinner {    
+
+.loading__spinner {
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -46,14 +48,14 @@ animation-delay:2000ms;
     width: 60px;
     height: 60px;
     animation: spin 1s infinite steps(12);
-    
+
     &:before,
     &:after,
     > span:before,
     > span:after,
     > span > span:before,
     > span > span:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 27px; /* (container width - part width)/2  */
@@ -61,37 +63,33 @@ animation-delay:2000ms;
         height: 15px;
         border-radius: 3px;
         background: rgba($color-primary, 0.16);
-        box-shadow: 0 (60px - 15px) rgba(#9356DC, 0.16); /* container height - part height */
+        box-shadow: 0 (60px - 15px) rgba(#9356dc, 0.16); /* container height - part height */
         transform-origin: 50% 30px; /* container height / 2 */
     }
 }
-  .loading__spinner:before {
-      background: $color-primary;
-  }
-  .loading__spinner:after {
-      transform: rotate(-30deg);
-      background-color: transparentize($color-primary, 0.24);
-  }
-  .loading__spinner > span:before {
-      transform: rotate(-60deg);
-      background-color: transparentize($color-primary, 0.36);
-  }
-  .loading__spinner > span > span:before {
-      transform: rotate(-90deg);
-      background-color: transparentize($color-primary, 0.48);
-  }
-  .loading__spinner > span:after {
-      transform: rotate(-120deg);
-      background-color: transparentize($color-primary, 0.60);
-  }
-  .loading__spinner > span > span:after {
-      transform: rotate(-150deg);
-      background-color: transparentize($color-primary, 0.72);
-  }
-  
-
-
-
+.loading__spinner:before {
+    background: $color-primary;
+}
+.loading__spinner:after {
+    transform: rotate(-30deg);
+    background-color: transparentize($color-primary, 0.24);
+}
+.loading__spinner > span:before {
+    transform: rotate(-60deg);
+    background-color: transparentize($color-primary, 0.36);
+}
+.loading__spinner > span > span:before {
+    transform: rotate(-90deg);
+    background-color: transparentize($color-primary, 0.48);
+}
+.loading__spinner > span:after {
+    transform: rotate(-120deg);
+    background-color: transparentize($color-primary, 0.6);
+}
+.loading__spinner > span > span:after {
+    transform: rotate(-150deg);
+    background-color: transparentize($color-primary, 0.72);
+}
 
 // headers
 .header__main {
@@ -110,7 +108,7 @@ animation-delay:2000ms;
     flex-direction: row;
     a {
         padding-left: 20px;
-        height:100%;
+        height: 100%;
         display: flex;
         align-items: center;
         i {
@@ -126,7 +124,6 @@ animation-delay:2000ms;
     }
 }
 
-
 // search bar
 .searcharea {
     width: 100%;
@@ -139,42 +136,39 @@ animation-delay:2000ms;
 
     @include for-desktop-up {
         width: 35%;
-        margin:0 auto;
-        box-shadow: inset 0px 0px 10px 1px darkgrey ;
+        margin: 0 auto;
+        box-shadow: inset 0px 0px 10px 1px darkgrey;
     }
     .searchbar {
         width: 150px;
         i {
             width: 25px;
         }
-        input[type=text] {
-        
+        input[type="text"] {
             width: 120px;
 
             border: none;
             background-color: $color-background-searchbar;
             font-size: 16px;
-            &:active, &:focus {
+            &:active,
+            &:focus {
                 outline: none;
             }
         }
     }
-    
 }
 
 //          MAIN
 .home-toppage {
     @include for-desktop-up {
-        display:flex;
+        display: flex;
         flex-direction: row-reverse;
         justify-content: space-around;
         margin-top: 20px;
-
     }
 }
 // blurb
 .blurb {
-
     width: 100%;
     text-align: center;
     height: 250px;
@@ -187,15 +181,13 @@ animation-delay:2000ms;
         @include shadow;
 
         height: 270px;
-
     }
     h2 {
         padding: 0 10%;
     }
     p {
-    font-size: 18px;
+        font-size: 18px;
     }
-           
 }
 
 // How To
@@ -207,6 +199,7 @@ animation-delay:2000ms;
     flex-direction: column;
     align-items: center;
     row-gap: 25px;
+
     @include for-desktop-up {
         width: 46%;
         padding: 30px 0 40px 0;
@@ -226,7 +219,7 @@ animation-delay:2000ms;
         width: 85%;
         height: 75px;
         border-radius: 20px;
-        background-color: $color-background-body;
+        // background-color: $color-background-body;
 
         display: flex;
         justify-content: flex-start;
@@ -238,14 +231,15 @@ animation-delay:2000ms;
         &:hover .fa-solid {
             color: $color-primary;
         }
-        
+
         & > * {
             position: relative;
             left: -12px;
         }
-
     }
-
+    .highlight {
+        background-color: lighten($color-background-elements, 5);
+    }
     .lilbtn {
         background-color: $color-primary;
         width: 25px;
@@ -266,10 +260,7 @@ animation-delay:2000ms;
         color: $color-icons-inactive;
         margin: 20px;
     }
-
 }
-
-
 
 // Home - Restaurant blocks
 .restaurants {
@@ -295,7 +286,7 @@ animation-delay:2000ms;
     }
 
     .restau__card-container {
-        width:100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -308,87 +299,88 @@ animation-delay:2000ms;
             flex-wrap: wrap;
             justify-content: space-evenly;
             row-gap: 50px;
-            
-            }
+        }
         .restaucard {
-        width:89%;
-        background-color: $color-background-elements;
-        border-radius: 16px;
-        @include shadow;
+            width: 89%;
+            background-color: $color-background-elements;
+            border-radius: 16px;
+            @include shadow;
 
-        @include for-desktop-up {
-            width: 40%;
-        }
-
-        .restaurant__pic-container {
-            position: relative;
-            text-align: center;
-
-            height: 175px;
-
-            .tag-new {
-                background-color: $color-btn-new; 
-                height: 28px;
-                width: 80px;
-                font-size: 14px;
-                color: $color-btn-text; 
-                border-radius: 3px;
-                border: 1px outset;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                position: absolute;
-                top: 12px;
-                right: 12px;
+            @include for-desktop-up {
+                width: 40%;
             }
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 16px 16px 0 0;
-                object-fit: cover;
-            }    
-        }
 
-        .restaurant-cardbody  {
-            padding: 0 15px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            .restaurant__cardtxt {
-                display: flex;
-                flex-direction: column;
-
-                height: 100%;
-                h2 {
-                font-size: 18px;
-                margin-bottom: -15px;
-                }
-                p {
-                    font-size: 17px;
-                }
-            }
-            .restaurant__heart-container {
-                align-self: flex-end;
+            .restaurant__pic-container {
                 position: relative;
-                height:65px;
-                width:40px;
-                display: flex;
+                text-align: center;
+
+                height: 175px;
+
+                .tag-new {
+                    background-color: $color-btn-new;
+                    height: 28px;
+                    width: 80px;
+                    font-size: 14px;
+                    color: $color-btn-text;
+                    border-radius: 3px;
+                    // border: 1px outset;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    position: absolute;
+                    top: 12px;
+                    right: 12px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 16px 16px 0 0;
+                    object-fit: cover;
+                }
             }
-        }  
-    }
 
+            .restaurant-cardbody {
+                padding: 0 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
 
+                .restaurant__cardtxt {
+                    display: flex;
+                    flex-direction: column;
+
+                    height: 100%;
+                    h2 {
+                        font-size: 18px;
+                        margin-bottom: -15px;
+                    }
+                    p {
+                        font-size: 17px;
+                    }
+                }
+                .restaurant__heart-container {
+                    align-self: flex-end;
+                    position: relative;
+                    height: 65px;
+                    width: 40px;
+                    display: flex;
+                }
+            }
+        }
     }
 }
 
 // Menu Page
 @keyframes tadaaa {
-    from {opacity:0}
-    to {opacity:1}
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .menu-page {
     position: relative;
@@ -440,9 +432,8 @@ animation-delay:2000ms;
                 font-size: 28px;
             }
             .restaurant__heart-container {
-                
                 // width: 100%;
-                padding-top:25px ;
+                padding-top: 25px;
             }
         }
         .menu-cat {
@@ -451,13 +442,13 @@ animation-delay:2000ms;
                 width: 75px;
 
                 @include for-tablet-portrait-up {
-                 margin: 0 auto;
+                    margin: 0 auto;
                 }
                 h2 {
-                text-transform: uppercase;
-                font-size: 16px;
-                font-weight: normal;
-                margin: 2px 0;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: normal;
+                    margin: 2px 0;
                 }
                 .menu-cat__line {
                     width: 40px;
@@ -465,160 +456,154 @@ animation-delay:2000ms;
                     margin: 0;
                     background-color: $color-menu-deco-bar;
                     @include for-tablet-portrait-up {
-                         margin: 0 auto;
-                        }
+                        margin: 0 auto;
+                    }
                 }
             }
-        .menu__menu-items-container {
-            width: 100%;
-
-            :nth-child(1) {
-                animation: tadaaa 2s ease-in-out forwards;
-                animation-delay:100ms;
-            }
-            :nth-child(2) {
-                animation: tadaaa 2s ease-in-out forwards;
-                animation-delay:500ms;
-            }
-            :nth-child(3) {
-                animation: tadaaa 2s ease-in-out forwards;
-                animation-delay:700ms;
-            }
-            :nth-child(4) {
-                animation: tadaaa 2s ease-in-out forwards;
-                animation-delay:900ms;
-            }
-
-            @include for-tablet-portait-only {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            @include for-tablet-landscape-only {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            @include for-desktop-up {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                column-gap: 15px;
-            }
-    
-            .menu__card {
-                height: 70px;
+            .menu__menu-items-container {
                 width: 100%;
-                background-color: $color-background-elements;
 
-                border-radius: 20px;
-                padding: 15px 12px;
-                margin: 15px 0;
-                line-height: 1em;
-                @include shadow;
+                :nth-child(1) {
+                    animation: tadaaa 2s ease-in-out forwards;
+                    animation-delay: 100ms;
+                }
+                :nth-child(2) {
+                    animation: tadaaa 2s ease-in-out forwards;
+                    animation-delay: 500ms;
+                }
+                :nth-child(3) {
+                    animation: tadaaa 2s ease-in-out forwards;
+                    animation-delay: 700ms;
+                }
+                :nth-child(4) {
+                    animation: tadaaa 2s ease-in-out forwards;
+                    animation-delay: 900ms;
+                }
 
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-
-                opacity: 0; // to make appear one by one
-
-                position: relative;
-                overflow: hidden;
-                
-                transition: all 0.2s ease-in 0s;
-                
                 @include for-tablet-portait-only {
-                    height: 80px;
-                    width: 80%;
-                }
-                @include for-tablet-landscape-only {
-                    height: 80px;
-                    width: 75%;
-                }
-                @include for-desktop-up {
-                    height: 80px;
-                    width: 30%;
-
-                }
-                &:before {
-                    content: "\f058"; 
-                    font-family: FontAwesome;
-                    font-size: 20px;
-                    color:$color-background-elements;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: absolute;
-                    top: 0;
-                    right: -55px;
-                    width: 55px;
-                    height: 100%;
-                    background-color: rgba($color-menu-item-overlay-color,0.9);
-                    transition: all 0.3s ease-in-out 0s;
-                    text-align: center;
-                }
-                &:hover {
-                    .price {
-                        transform: translate(-55px);
-                        transition: transform 0.3s ease-in-out 0s;
-                    }
-                  .menu__card__txt {
-                    width:72%;
-                    transition: width 0.3s ease-in-out 0s;  // 
-                    }                  
-                    &:before {
-                        right: 0;
-                        text-indent: 0px;
-                    }
-                }
-
-                .menu__card__txt {
                     display: flex;
                     flex-direction: column;
-                    width: 90%;
-
-                    h3 {
-                        margin: 6px 0;
-
-                        overflow-y: clip;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-                    p {
-                        font-size: 15px;
-                        margin: 0 0 3px 0;
-
-                        width: 98%;
-
-                        overflow-y: clip;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        
-                    }
+                    align-items: center;
                 }
-                .price {
-                    font-weight: bold;
-                    color: $color-background-footer;
-                    width: 10%;
-                    height: 100%;
+                @include for-tablet-landscape-only {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                @include for-desktop-up {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    column-gap: 15px;
+                }
+
+                .menu__card {
+                    height: 70px;
+                    width: 100%;
+                    background-color: $color-background-elements;
+
+                    border-radius: 20px;
+                    padding: 15px 12px;
+                    margin: 15px 0;
+                    line-height: 1em;
+                    @include shadow;
 
                     display: flex;
-                    justify-content: flex-end;
-                    align-items: flex-end;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
 
-                    transition: transform 0.3s ease-in-out 0s;
-               
+                    opacity: 0; // to make appear one by one
+
+                    position: relative;
+                    overflow: hidden;
+
+                    transition: all 0.2s ease-in 0s;
+
+                    @include for-tablet-portait-only {
+                        height: 80px;
+                        width: 80%;
+                    }
+                    @include for-tablet-landscape-only {
+                        height: 80px;
+                        width: 75%;
+                    }
+                    @include for-desktop-up {
+                        height: 80px;
+                        width: 30%;
+                    }
+                    &:before {
+                        content: "\f058";
+                        font-family: FontAwesome;
+                        font-size: 20px;
+                        color: $color-background-elements;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        top: 0;
+                        right: -55px;
+                        width: 55px;
+                        height: 100%;
+                        background-color: rgba($color-menu-item-overlay-color, 0.9);
+                        transition: all 0.3s ease-in-out 0s;
+                        text-align: center;
+                    }
+                    &:hover {
+                        .price {
+                            transform: translate(-55px);
+                            transition: transform 0.3s ease-in-out 0s;
+                        }
+                        .menu__card__txt {
+                            width: 72%;
+                            transition: width 0.3s ease-in-out 0s; //
+                        }
+                        &:before {
+                            right: 0;
+                            text-indent: 0px;
+                        }
+                    }
+
+                    .menu__card__txt {
+                        display: flex;
+                        flex-direction: column;
+                        width: 90%;
+
+                        h3 {
+                            margin: 6px 0;
+
+                            overflow-y: clip;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        p {
+                            font-size: 15px;
+                            margin: 0 0 3px 0;
+
+                            width: 98%;
+
+                            overflow-y: clip;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                    .price {
+                        font-weight: bold;
+                        color: $color-background-footer;
+                        width: 10%;
+                        height: 100%;
+
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+
+                        transition: transform 0.3s ease-in-out 0s;
+                    }
                 }
             }
-            }
         }
-    }     
+    }
 }
-
-    
-
 
 // footers
 footer {
@@ -649,12 +634,12 @@ footer {
     }
 }
 .footer--main {
-margin-top: 30px; // why this no work?
+    margin-top: 30px; // why this no work?
 }
 .footer--palette {
     position: absolute;
     top: 1400px;
-    z-index:200;
+    z-index: 200;
     @include for-tablet-portrait-up {
         top: 1580px;
     }
@@ -665,7 +650,7 @@ margin-top: 30px; // why this no work?
 .footer--lanote {
     position: absolute;
     top: 1480px;
-    z-index:200;
+    z-index: 200;
     @include for-tablet-portrait-up {
         top: 1685px;
     }
@@ -675,33 +660,32 @@ margin-top: 30px; // why this no work?
     @include for-desktop-up {
         top: 1020px;
     }
-
 }
 .footer--francaise {
-        position: absolute;
-        top: 1400px;
-        z-index:200;
-        @include for-tablet-portrait-up {
-            top: 1575px;
-        }
-        @include for-tablet-landscape-only {
-            top: 1575px;
-        }
-        @include for-desktop-up {
-            top: 910px;
-        }
+    position: absolute;
+    top: 1400px;
+    z-index: 200;
+    @include for-tablet-portrait-up {
+        top: 1575px;
     }
+    @include for-tablet-landscape-only {
+        top: 1575px;
+    }
+    @include for-desktop-up {
+        top: 910px;
+    }
+}
 .footer--delice {
-        position: absolute;
-        top: 1400px;
-        z-index:200;
-        @include for-tablet-portrait-up {
-            top: 1575px;
-        }
-        @include for-tablet-landscape-only {
-            top: 1575px;
-        }
-        @include for-desktop-up {
-            top: 910px;
-        }
+    position: absolute;
+    top: 1400px;
+    z-index: 200;
+    @include for-tablet-portrait-up {
+        top: 1575px;
     }
+    @include for-tablet-landscape-only {
+        top: 1575px;
+    }
+    @include for-desktop-up {
+        top: 910px;
+    }
+}

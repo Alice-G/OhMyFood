@@ -1,13 +1,13 @@
 // contains all the resets, variables, mixins, and utility classes
-$color-primary: #9356DC;
-$color-secondary: #FF79DA; 
-$color-tertiary: #99E2D0;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
 $color-background-body: #f0f0f0;
 $color-background-elements: #fdfdfd;
 $color-background-footer: #353535;
 $color-background-searchbar: darken($color-background-body, 7%);
 $color-shadow: #bebebe;
-$color-btn-new: #99E2D0;
+$color-btn-new: #99e2d0;
 $color-menu-deco-bar: $color-btn-new;
 $color-menu-item-overlay-color: $color-btn-new;
 $color-btn-text: darken($color-btn-new, 38%);
@@ -16,59 +16,70 @@ $color-text-invert: $color-background-body;
 $color-icons-inactive: #6d6d6d;
 $color-icons-active: $color-primary;
 $btn-gradient: linear-gradient(174deg, $color-secondary 0%, $color-primary 85%, $color-primary 100%);
-$btn-gradient-lighter: linear-gradient(174deg, lighten($color-secondary, 10%) 0%, lighten($color-primary, 10%) 85%, lighten($color-primary, 10%) 100%);
+$btn-gradient-lighter: linear-gradient(
+  174deg,
+  lighten($color-secondary, 10%) 0%,
+  lighten($color-primary, 10%) 85%,
+  lighten($color-primary, 10%) 100%
+);
 $color-heart-icon-gradient: linear-gradient(0deg, $color-secondary 0%, $color-primary 75%, $color-primary 100%);
-
-
 
 // $color-heart-icon-gradient:  linear-gradient(0deg, rgba(255,18,222,1) 0%, rgba(156,45,253,1) 100%);
 
-$font-title: 'Shrikhand', cursive;
+$font-title: "Shrikhand", cursive;
 
 @mixin shadow {
-    box-shadow: 2px 5px 8px 0px $color-shadow;
+  box-shadow: 2px 5px 8px 0px $color-shadow;
 }
 @mixin shadow-darker {
-    box-shadow: 2px 5px 8px 0px darken($color-shadow, 20%);
+  box-shadow: 2px 5px 8px 0px darken($color-shadow, 20%);
 }
 
 // do a if mixin of btn style with hover or not and color and shadow?
 
 @mixin header-style {
-    width: 100%;
-    height: 63px;
-    background-color: $color-background-elements;
-    font-family: $font-title;
-    font-size: 15px;
-    font-weight: normal;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  width: 100%;
+  height: 63px;
+  background-color: $color-background-elements;
+  font-family: $font-title;
+  font-size: 15px;
+  font-weight: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
 
 //                      BREAKPOINTS
 @mixin for-phone-only {
-    @media (max-width: 599px) { @content; }
+  @media (max-width: 599px) {
+    @content;
   }
-  @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
   }
-  @mixin for-tablet-portait-only {
-    @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin for-tablet-portait-only {
+  @media (min-width: 600px) and (max-width: 899px) {
+    @content;
   }
-  @mixin for-tablet-landscape-up {
-    @media (min-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
   }
-  @mixin for-tablet-landscape-only {
-    @media (min-width: 900px) and (max-width: 1199px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1199px) {
+    @content;
   }
-  @mixin for-desktop-up {
-    @media (min-width: 1200px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
   }
-
-
-
+}
 
 //   .test {
 //     background: lightgreen;

@@ -219,7 +219,7 @@
         width: 85%;
         height: 75px;
         border-radius: 20px;
-        // background-color: $color-background-body;
+        background-color: $color-background-body;
 
         display: flex;
         justify-content: flex-start;
@@ -238,7 +238,7 @@
         }
     }
     .highlight {
-        background-color: lighten($color-background-elements, 5);
+        background-color: lighten($color-background-body, 3);
     }
     .lilbtn {
         background-color: $color-primary;
